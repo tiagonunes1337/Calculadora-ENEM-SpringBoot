@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora ENEM</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[--color-background] flex items-center justify-center p-4 min-h-screen">
+
+    <main class="animate-fadeIn w-full max-w-md">
+        <div class="bg-[--color-surface] p-8 rounded-2xl shadow-xl border border-slate-100">
+            
+            <header class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-[--color-text-primary] tracking-tight">Simulador ENEM</h1>
+                <p class="text-[--color-text-secondary] mt-2">Média geral, para conseguir aquele seu curso dos sonhos.</p>
+            </header>
+
+            <form th:action="@{/calcular}" th:object="${enem}" method="POST" class="space-y-4">
+                
+                <div class="space-y-1">
+                    <label class="text-sm font-semibold text-[--color-text-primary]">Linguagens e Códigos</label>
+                    <input type="number" th:field="*{linguagens}" placeholder="Ex: 650.0" step="0.1" min="0" max="1000" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[--color-primary] focus:outline-none transition-all">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-sm font-semibold text-[--color-text-primary]">Ciências Humanas</label>
+                    <input type="number" th:field="*{humanas}" placeholder="Ex: 710.0" step="0.1" min="0" max="1000" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[--color-primary] focus:outline-none transition-all">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-sm font-semibold text-[--color-text-primary]">Ciências da Natureza</label>
+                    <input type="number" th:field="*{natureza}" placeholder="Ex: 580.0" step="0.1" min="0" max="1000" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[--color-primary] focus:outline-none transition-all">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-sm font-semibold text-[--color-text-primary]">Matemática</label>
+                    <input type="number" th:field="*{matematica}" placeholder="Ex: 850.0" step="0.1" min="0" max="1000" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[--color-primary] focus:outline-none transition-all">
+                </div>
+
+                <div class="space-y-1">
+                    <label class="text-sm font-semibold text-[--color-text-primary]">Redação</label>
+                    <input type="number" th:field="*{redacao}" placeholder="Ex: 960.0" step="0.1" min="0" max="1000" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-[--color-primary] focus:outline-none transition-all">
+                </div>
+
+                 <button type="submit" 
+                 class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-95">
+                 Calcular Média
+                </button>
+
+            </form>
+            
+            <div th:if="${resultado}" class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100 animate-fadeIn text-center">
+                <h2 class="text-[--color-text-secondary] text-xs uppercase font-bold tracking-widest">Sua Média Estimada</h2>
+                <p class="text-4xl font-black text-[--color-primary] mt-2" th:text="${resultado}"></p>
+                <p class="text-sm mt-2 font-medium" 
+                 th:text="${feedback}" 
+                 th:classappend="${resultado >= '700'} ? 'text-green-600' : 'text-orange-450'">
+                </p>
+                <a th:href="@{/}" class="text-xs text-blue-400 mt-4 inline-block hover:underline">Limpar campos</a>
+            </div>
+
+            <footer class="mt-8 pt-6 border-t border-slate-50 text-center">
+                <p class="text-[13px] text-[--color-text-secondary] uppercase tracking-tighter font-medium">
+                    Esse calculo é feito em média ponderada.
+                </p>
+                <p class="text-[10px] text-[--color-text-secondary] uppercase tracking-tighter font-medium">
+                    Desenvolvido por Tiago de Aquino Nunes
+                </p>
+            </footer>
+
+        </div>
+    </main>
+
+</body>
+</html>
