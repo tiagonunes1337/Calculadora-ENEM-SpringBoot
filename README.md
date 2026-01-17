@@ -87,4 +87,4 @@ Este projeto tem fins educacionais e foi desenvolvido para consolidar conhecimen
 ## 👨‍💻 Autor
 ### Tiago de Aquino Nunes
 
-Estudante de Técnico em Informática e graduando em Engenharia de Software.
+Estudante de Engenharia de Software.
