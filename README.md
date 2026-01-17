@@ -54,33 +54,36 @@ O projeto foi estruturado seguindo boas práticas de Engenharia de Software:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/O-TEU-USUARIO/calculadora-enem-springboot.git
-Entre na pasta do projeto:
+   ```
+2. Entre na pasta do projeto:
 
-bash
-Copiar código
+
+```
 cd calcularenem
-Execute a aplicação:
-
-bash
-Copiar código
+```
+3. Execute a aplicação:
+```bash
 ./mvnw spring-boot:run
-Acesse no navegador:
+```
+4. Acesse no navegador:
 
-arduino
-Copiar código
+
+
+```
 http://localhost:8080
-🎯 Objetivo do Projeto
+```
+## 🎯 Objetivo do Projeto
 Este projeto tem fins educacionais e foi desenvolvido para consolidar conhecimentos em:
 
-Spring Boot
+## Spring Boot
 
-Arquitetura MVC
+## Arquitetura MVC
 
-Integração Backend e Frontend
+## Integração Backend e Frontend
 
-Evolução de aplicações Java Web tradicionais (JSP) para arquiteturas modernas
+## Evolução de aplicações Java Web tradicionais (JSP) para arquiteturas modernas
 
-👨‍💻 Autor
-Tiago de Aquino Nunes
+## 👨‍💻 Autor
+### Tiago de Aquino Nunes
 
-Estudante de Técnico em Informática e graduando em Engenharia de Software.
+###Estudante de Técnico em Informática e graduando em Engenharia de Software.
