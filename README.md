@@ -10,7 +10,8 @@ Este projeto é uma ferramenta interativa desenvolvida para auxiliar estudantes 
 - **Frontend:** HTML5 e Thymeleaf para renderização dinâmica  
 - **CSS Framework:** Tailwind CSS (Modern UI/UX)  
 - **Arquitetura:** Padrão MVC (Model-View-Controller)  
-- **Gestão de Dependências:** Maven  
+- **Gestão de Dependências:** Maven
+- **Figma** Criação do protótipo  
 
 ---
 
