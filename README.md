@@ -54,7 +54,7 @@ O projeto foi estruturado seguindo boas práticas de Engenharia de Software:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/tiagonunes1337/calculadora-enem-springboot.git
+   git clone [https://github.com/tiagonunes1337/calculadora-enem-springboot.git](https://github.com/tiagonunes1337/Calculadora-ENEM-SpringBoot.git)
    ```
 2. Entre na pasta do projeto:
 
